@@ -13,6 +13,7 @@ public class LoginPage extends BasePage {
     }
 
     public void enterUsername(String username) {
+        System.out.println("Hello Hello");
         driver.findElement(usernameField).sendKeys(username);
     }
 
