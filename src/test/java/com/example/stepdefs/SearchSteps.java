@@ -31,7 +31,7 @@ public class SearchSteps {
 
     @Then("I should see a {string} message")
     public void i_should_see_a_message(String message) {
-        Assert.assertTrue("No results message not displayed!", searchPage.isNoResultsMessageDisplayed());
+        Assert.assertTrue("No results in the message not displayed!", searchPage.isNoResultsMessageDisplayed());
         driver.quit();
     }
 }
