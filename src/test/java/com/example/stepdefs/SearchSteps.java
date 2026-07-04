@@ -1,5 +1,5 @@
 package com.example.stepdefs;
-
+import com.example.pages.LoginPage;
 import com.example.pages.SearchPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
@@ -9,12 +9,14 @@ import org.junit.Assert;
 public class SearchSteps {
     WebDriver driver;
     SearchPage searchPage;
-
+    LoginPage loginPage;
     @Given("I am on the home page")
+
     public void i_am_on_the_home_page() {
         driver = new ChromeDriver();
         driver.get("https://example.com/home");
         searchPage = new SearchPage(driver);
+        loginPage.enterPassword("password");
     }
 
     @When("I search for {string}")
