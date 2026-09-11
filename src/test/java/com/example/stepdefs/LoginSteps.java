@@ -20,6 +20,7 @@ public class LoginSteps {
     public void i_enter_credentials(String username, String password) {
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
+        loginPage.enterPassword("kkkkkkkkk");
     }
 
     @And("I click login")
@@ -30,6 +31,6 @@ public class LoginSteps {
     @Then("I should be redirected to the dashboard")
     public void i_should_be_redirected() {
         // Add assertion here
-        driver.quit();
+        driver.close();
     }
 }
