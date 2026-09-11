@@ -27,6 +27,7 @@ public class BasePage {
     }
 
     protected String getText(WebElement element) {
+        System.out.println("kailash");
         return wait.until(ExpectedConditions.visibilityOf(element)).getText();
     }
 
